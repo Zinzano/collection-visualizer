@@ -5,9 +5,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #232346;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  color: white;
+}
+
+header h1  {
+  font-size: 48px;
+}
+
+main {
+  margin: 0 auto;
+  width: 60%;
+}
+
+section {
+  padding: 15px;
+}
+
+.searchbar {
+  width: 100%;
+  padding: 15px;
+
+  font-size: 20px;
+  font-weight: 300;
+
+}
+
+.result {
+  color: white;
 }
