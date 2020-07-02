@@ -1,6 +1,7 @@
 import React, { useState } from  'react';
 import './App.css';
 import Searchbar from "./components/Searchbar";
+import Item from "./components/Item";
 import axios from 'axios';
 
 
@@ -26,6 +27,7 @@ function App() {
                }
            }).then(( {data} ) => {
                let res = data.results;
+               console.log(res)
 
                setState(prevState => {
                    return { ...prevState, results: res}
@@ -54,9 +56,13 @@ function App() {
         <main>
             <Searchbar inputHandler={searchboxInputHandler} searchHandler={searchbarSearchHandler} />
 
-            { state.results.map(r => (
-                <div key={r.id} className="result">{r.name}</div>
-            ))}
+            <section className="collection">
+
+                { state.results.map(r => (
+                    <Item key={r.id} item={r}/>
+                ))}
+
+            </section>
         </main>
 
     </div>
